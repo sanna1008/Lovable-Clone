@@ -1,7 +1,3 @@
-Here’s a clean and professional **README.md** for your **Lovable-Clone** project (concise and structured 👇).
-
----
-
 # 💙 Lovable-Clone
 
 A Spring Boot–based backend application inspired by Lovable, designed to manage users, projects, subscriptions, and project collaboration.
