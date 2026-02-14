@@ -24,6 +24,8 @@ public class User {
     String avatarUrl;
     Instant createdAt;
     Instant updatedAt;
-    Instant deletedAt;      //soft delete
+    //soft delete : we do soft delete instead of hard delete due to data integrity 
+    //auditability and archival
+    Instant deletedAt;      
     
 }
