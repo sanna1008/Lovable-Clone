@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import com.bitsmad.Lovable_Clone.enums.ProjectRole;
+
 @Getter
 @Setter
 @Builder
@@ -22,5 +24,3 @@ public class ProjectMember {
     Instant invitedAt;
     Instant accpetedAt;
 }
-
-

@@ -25,9 +25,13 @@ com.bitsmad.Lovable_Clone
 │   ├── Project
 │   ├── Plan
 │   ├── Subscription
-│   ├── SubscriptionStatus
 │   ├── ProjectFile
 │   └── ProjectMember (to be implemented)
+│
+├── enums
+│   ├── PreviewStatus
+│   ├── ProjectRole
+│   ├── SubscriptionStatus
 │
 ├── (Upcoming)
 │   ├── repository

@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
+import com.bitsmad.Lovable_Clone.enums.SubscriptionStatus;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,8 +23,8 @@ public class Subscription {
     SubscriptionStatus status;
     Instant currentPeriodStart;
     Instant currentPeriodEnd;
-    Boolean cancelAtPeriodEnd=false;
+    Boolean cancelAtPeriodEnd = false;
     Instant createdAt;
     Instant updatedAt;
-    
+
 }

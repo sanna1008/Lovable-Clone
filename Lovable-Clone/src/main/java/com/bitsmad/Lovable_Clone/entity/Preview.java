@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import com.bitsmad.Lovable_Clone.enums.PreviewStatus;
+
 import java.time.Instant;
 
 @Getter

@@ -1,4 +1,4 @@
-package com.bitsmad.Lovable_Clone.entity;
+package com.bitsmad.Lovable_Clone.enums;
 
 //Enum : User defined datatype with constraints
 //Used to define a set of named constants

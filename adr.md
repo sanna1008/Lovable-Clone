@@ -188,3 +188,33 @@ We chose a **Spring Boot + PostgreSQL + Layered Architecture** approach to ensur
 * SaaS-readiness
 * Clean separation of concerns
 * Long-term extensibility
+
+---
+
+# ADR-0002: Enum Package Refactoring
+
+**Status:** Accepted
+**Date:** 2026-02-14
+**Decision Makers:** Development Team
+
+---
+
+## 1️⃣ Context
+
+As the project grows, the `entity` package was becoming cluttered with both entity classes and enum definitions. This mixes domain models with value types, reducing clarity and making navigation harder.
+
+## 2️⃣ Decision
+
+We decided to move all Enum classes from the `com.bitsmad.Lovable_Clone.entity` package to a new generic package `com.bitsmad.Lovable_Clone.enums`.
+
+## 3️⃣ Consequences
+
+### ✅ Positive
+
+* **Improved Organization**: Clear separation between Entities (database tables) and Enums (constants).
+* **Better Readability**: Easier to find and manage Enums.
+* **Cleaner Entity Package**: The `entity` package now focuses solely on JPA entities.
+
+### ⚠️ Trade-offs
+
+* **Refactoring Cost**: Required updating imports in all files referencing these Enums (completed).
