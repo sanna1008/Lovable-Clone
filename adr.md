@@ -218,3 +218,37 @@ We decided to move all Enum classes from the `com.bitsmad.Lovable_Clone.entity` 
 ### ⚠️ Trade-offs
 
 * **Refactoring Cost**: Required updating imports in all files referencing these Enums (completed).
+
+---
+
+# ADR-0003: API & Service Layer Implementation
+
+**Status:** Accepted
+**Date:** 2026-02-21
+**Decision Makers:** Development Team
+
+---
+
+## 1️⃣ Context
+
+With the Entity layer stabilized, we needed to implement the core business logic and expose it via RESTful APIs. This includes authentication (Signup/Login) and project management basics.
+
+## 2️⃣ Decision
+
+We implemented the `controller` and `service` layers following the established layered architecture. 
+- Created `AuthController` and `AuthService` (interface + initial structure) to handle user identity operations.
+- Established `ProjectController` as the entry point for project-related operations.
+- Decided to use DTOs (`dto` package) for all request and response payloads to decouple the API from the database entities.
+
+## 3️⃣ Consequences
+
+### ✅ Positive
+
+* **Clear API Contract**: DTOs ensure that internal changes to entities don't automatically break the public API.
+* **Separation of Concerns**: Controllers handle HTTP mapping, while services contain the business logic.
+* **Security Readiness**: Centralizing authentication in `AuthController` makes it easier to integrate Spring Security in the next phase.
+
+### ⚠️ Trade-offs
+
+* **Increased Boilerplate**: Adding DTOs and Service interfaces requires more files and mapping logic.
+* **Partial Implementation**: The initial service implementations are placeholders pending the `repository` layer completion.

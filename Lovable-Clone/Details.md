@@ -28,7 +28,7 @@ The data model is designed to support the following core workflows:
     *   *Key Fields*: `name`, `description`, `isPublic`, `owner`.
     *   *Purpose*: Container for all files, chats, and deployments.
 *   **`ProjectMember`**: Manages collaboration.
-    *   *Key Fields*: `project`, `user`, `role`.
+    *   *Key Fields*: `project`, `user`, `role`, `invitedAt`, `acceptedAt`.
     *   *Purpose*: Allows multiple users to work on the same project with defined permissions.
 *   **`ProjectFile`**: Represents a file within the project.
     *   *Key Fields*: `path`, `minioObjectKey` (storage reference), `content` (implied or stored externally).
@@ -106,3 +106,7 @@ erDiagram
     Project ||--o{ UsageLog : "usage context"
 
 ```
+
+## Important links to understand the project's table relationships
+
+http://docs.google.com/spreadsheets/d/1Mfw1KfTvuOtGLzBC-ICE2NPvDAh0r_RL_WzPr7THRSw/edit?gid=37047342#gid=37047342

@@ -20,23 +20,31 @@ A Spring Boot–based backend application inspired by Lovable, designed to manag
 ```
 com.bitsmad.Lovable_Clone
 │
+├── controller
+│   ├── AuthController
+│   └── ProjectController
+│
 ├── entity
 │   ├── User
 │   ├── Project
 │   ├── Plan
 │   ├── Subscription
 │   ├── ProjectFile
-│   └── ProjectMember (to be implemented)
+│   ├── ProjectMember
+│   └── (and others...)
 │
 ├── enums
 │   ├── PreviewStatus
 │   ├── ProjectRole
 │   ├── SubscriptionStatus
+│   └── (and others...)
 │
-├── (Upcoming)
-│   ├── repository
-│   ├── service
-│   └── controller
+├── service
+│   ├── AuthService
+│   └── UserService
+│
+├── repository
+│   └── (Pending)
 ```
 
 ---
@@ -55,32 +63,38 @@ com.bitsmad.Lovable_Clone
 ### 2️⃣ Domain Model (Entity Layer)
 
 #### 👤 User
-
 Represents registered users of the application.
 
 #### 📂 Project
-
 Core resource of the system. Users can create and manage projects.
 
 #### 💳 Plan
-
 Defines available subscription tiers.
 
 #### 🔄 Subscription
-
 Links a user/project to a subscription plan.
 
 #### 📌 SubscriptionStatus
-
 Tracks subscription state (e.g., `ACTIVE`, `CANCELLED`, etc.).
 
 #### 📁 ProjectFile
-
 Represents files associated with a project.
 
 #### 👥 ProjectMember
+Manages collaborators/team members within a project with specific roles.
 
-Currently created as a placeholder. Intended to manage collaborators/team members within a project.
+---
+
+### 3️⃣ API & Service Layer
+
+#### 🔐 Authentication
+Implemented `AuthController` and `AuthService` handling `signUp` and `login` (DTOs included).
+
+#### 💼 User Profile
+Implemented `getProfile` endpoint in `AuthController`.
+
+#### 📂 Projects
+`ProjectController` established as a base for project-specific APIs.
 
 ---
 
@@ -144,6 +158,6 @@ The goal of this project is to build a scalable backend system that supports:
 ## 📌 Current Status
 
 ✅ Entity Layer Completed
-🚧 Repository & Service Layer – Pending
-🚧 Controllers – Pending
-🚧 Security Integration – Pending
+✅ Basic Controller & Service Layer Established
+🚧 Repository Layer – Pending
+🚧 Security Integration (Spring Security + JWT) – Pending
